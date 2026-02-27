@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENİSEVİYORUM</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div id="floating-elements"></div>
+    
+    <audio id="background-music" loop>
+        <source src="yeniden.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="container">
+        <h1 class="pulsing-title">Kimlik doğrulama sorusu</h1>
+        
+        <p class="love-message">"ben en çok sevgili adayım nili seviyorum"</p>
+        
+        <div class="question-section">
+            <p class="question">Birtanemin en sevdiği hayvan?</p>
+            
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="answer-input" 
+                    placeholder="mısırrrrr ❤️ nilll"
+                    autocomplete="off"
+                >
+                <button id="submit-btn"><span class="heart-emoji">❤️</span> Giriş Yap <span class="heart-emoji">❤️</span></button>
+            </div>
+            
+            <div id="error-message" class="error-message hidden"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

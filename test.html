@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENİSEVİYORUM - Test</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="test-style.css">
+</head>
+<body>
+    <div class="test-background"></div>
+    
+    <audio id="bravo-sound">
+        <source src="bravo.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="bidadene-sound">
+        <source src="bidadene.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="background-music" loop>
+        <source src="yeniden.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="test-container">
+        <div class="progress-section">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="progress-text">Soru <span id="current-question">1</span>/5</p>
+        </div>
+        
+        <!-- Normal sorular için -->
+        <div class="question-box" id="normal-question-box">
+            <h2 class="question-title" id="question-text"></h2>
+            
+            <div class="options-container">
+                <div class="option-card" data-option="A" id="option-a">
+                    <div class="option-image-container">
+                        <img id="image-a" src="" alt="Seçenek A">
+                    </div>
+                    <div class="option-label">A)</div>
+                    <div class="option-text" id="text-a"></div>
+                </div>
+                
+                <div class="option-card" data-option="B" id="option-b">
+                    <div class="option-image-container">
+                        <img id="image-b" src="" alt="Seçenek B">
+                    </div>
+                    <div class="option-label">B)</div>
+                    <div class="option-text" id="text-b"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 5. soru için özel yapı -->
+        <div class="question-box special-question-box hidden" id="special-question-box">
+            <div class="special-image-container">
+                <img src="anaresim.jpg" alt="Ana Resim" id="special-main-image">
+            </div>
+            
+            <p class="special-question-text">nil ve ardanın kahveleri karıştı doğru kahvelerine ulaşmalarına yardım et ki 55 yıl sonra dahi içebilsinler</p>
+            
+            <div class="coffee-selection-container">
+                <div class="coffee-person">
+                    <h3 class="person-name">Nil</h3>
+                    <select id="nil-coffee" class="coffee-select">
+                        <option value="">Kahve Seç...</option>
+                        <option value="americano">Americano</option>
+                        <option value="latte">Latte</option>
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="espresso">Espresso</option>
+                        <option value="mocha">Mocha</option>
+                        <option value="dandik">Dandik Tüm Kahveler</option>
+                    </select>
+                </div>
+                
+                <div class="coffee-person">
+                    <h3 class="person-name">Arda</h3>
+                    <select id="arda-coffee" class="coffee-select">
+                        <option value="">Kahve Seç...</option>
+                        <option value="americano">Americano</option>
+                        <option value="latte">Latte</option>
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="espresso">Espresso</option>
+                        <option value="mocha">Mocha</option>
+                        <option value="dandik">Dandik Tüm Kahveler</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="check-coffee-btn" class="coffee-check-btn">
+                <span class="heart-emoji">❤️</span> Kontrol Et <span class="heart-emoji">❤️</span>
+            </button>
+        </div>
+        
+        <div id="confetti-container"></div>
+    </div>
+    
+    <script src="test.js"></script>
+</body>
+</html>
